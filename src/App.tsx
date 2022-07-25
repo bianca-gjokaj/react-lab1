@@ -1,25 +1,53 @@
 import React from 'react';
-import logo from './logo.svg';
-
+import './App.css';
+import { useState } from 'react';
+import '../src/css/header.css'
+import '../src/css/ad-designer.css'
 
 function App() {
+  const [adDesignerFlavor, setPickFlavor] = useState('');
+
+  const pickedFlavor1 = () => {
+    setPickFlavor('Vanilla');
+  }
+
+  const pickedFlavor2 = () => {
+    setPickFlavor('Chocolate');
+  }
+
+  const pickedFlavor3 = () => {
+    setPickFlavor('Strawberry');
+  }
+
+  const flavorButton = () => {
+    if (adDesignerFlavor === 'Vanilla') {
+      return 'Vanilla'
+    } else if (adDesignerFlavor === 'Chocolate') {
+      return 'Chocolate'
+    } else {
+      return 
+    }
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="App">
+        <header className="App-header">
+          <h1>Ice Cream Wars</h1>
+        </header>
+      </div>
+
+      <div className='ad-container'>
+        <h1 className='ad-designer-title'>
+          Ad Designer
+        </h1>
+        <button>
+
+        </button>
+      </div>
+
+
+    </>
   );
 }
 
